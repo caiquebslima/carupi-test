@@ -1,13 +1,15 @@
 import GameListInterface from '../interfaces/GameListInterface';
+import '../styles/game-item-miniature.scss';
 
 function GameItemMiniature({ name, background_image }: GameListInterface) {
   return (
-    <article className='game-miniature col-xl-4'>
+    <article className='game-miniature'>
       <figure className='game-miniature__img'>
         <img src={background_image} alt={name + ' cover'} />
       </figure>
-      <h3>{name}</h3>
-      <button>Add to Cart</button>
+      <div className='game-miniature__info'>
+        <h5>{name}</h5>
+      </div>
     </article>
   );
 }

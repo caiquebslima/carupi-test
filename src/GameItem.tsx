@@ -13,19 +13,18 @@ function GameItem({ match }: any) {
       `https://rawg.io/api/games/${match.params.id}`
     );
     const game = data.data;
+    console.log(game);
 
     let platformList: any[] = [];
 
     game.platforms.forEach((platform: any) =>
-      platformList.push(platform.platform.name + ', ')
+      platformList.push(platform.platform.name)
     );
-
-    console.log(platformList);
 
     setGameInfo({
       name: game.name,
       background_image: game.background_image,
-      platforms: platformList,
+      platforms: platformList.join(', '),
       genres: game.genres[0].name,
       developers: game.developers[0].name,
     });
@@ -43,9 +42,18 @@ function GameItem({ match }: any) {
       </div>
       <div>
         <h2>{gameInfo.name}</h2>
-        <p>{gameInfo.genres}</p>
-        <p>{gameInfo.platforms}</p>
-        <p>{gameInfo.developers}</p>
+        <p>
+          <strong>Genres: </strong>
+          {gameInfo.genres}
+        </p>
+        <p>
+          <strong>Platforms: </strong>
+          {gameInfo.platforms}
+        </p>
+        <p>
+          <strong>Developers: </strong>
+          {gameInfo.developers}
+        </p>
       </div>
     </article>
   );

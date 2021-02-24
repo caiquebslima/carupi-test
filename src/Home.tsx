@@ -22,7 +22,7 @@ function Home() {
     <main className='container'>
       <section className='row'>
         {gameList.map((game: any) => (
-          <Link to={`/${game.id}`}>
+          <Link to={`/${game.id}`} className='col-lg-3 mb-2 mt-2'>
             <GameItemMiniature
               key={game.id}
               background_image={game.background_image}
