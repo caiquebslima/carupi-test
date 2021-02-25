@@ -1,0 +1,25 @@
+.game-item {
+  display: flex;
+  width: 100%;
+  .panel {
+    height: 100%;
+  }
+  .panel.image > figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      min-height: 500px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .panel.info {
+    text-align: center;
+    padding: 2rem;
+    h2 {
+      font-weight: 700;
+    }
+  }
+}

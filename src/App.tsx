@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/app.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './Home';
+import GameItem from './GameItem';
+import EmptySpace from './components/EmptySpace';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='app'>
+        <Header />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/:id' exact component={GameItem} />
+        </Switch>
+        <EmptySpace height={40} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
