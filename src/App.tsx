@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './Home';
-import GameItem from './GameItem';
 import EmptySpace from './components/EmptySpace';
+import SingleGamePage from './SingleGamePage';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/:id' exact component={GameItem} />
+          <Route path='/:id' exact component={SingleGamePage} />
         </Switch>
         <EmptySpace height={40} />
         <Footer />

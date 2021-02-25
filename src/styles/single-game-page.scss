@@ -3,6 +3,9 @@
   width: 100%;
   .panel {
     height: 100%;
+    @media only screen and (max-width: 900px) {
+      height: 50%;
+    }
   }
   .panel.image > figure {
     width: 100%;
