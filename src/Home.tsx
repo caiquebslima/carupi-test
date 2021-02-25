@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <main className='container'>
-      <section className='row pb-5'>
+      <section className='row pb-5 '>
         <p className='heading announcer col-lg-12'>Most Popular Games</p>
         {gameList.map((game: any) => (
           <div className='col-lg-3 my-2 px-2'>
