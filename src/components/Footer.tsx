@@ -1,5 +1,7 @@
+import '../styles/footer.scss';
+
 function Footer() {
-  return <footer>this is the footer</footer>;
+  return <footer>João's game shop</footer>;
 }
 
 export default Footer;

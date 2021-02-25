@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import './styles/game-item.scss';
+import Button from '@material-ui/core/Button';
 
 function GameItem({ match }: any) {
   React.useEffect(() => {
@@ -31,8 +33,8 @@ function GameItem({ match }: any) {
   };
 
   return (
-    <article>
-      <div>
+    <article className='container game-item'>
+      <div className='panel image'>
         <figure>
           <img
             src={gameInfo.background_image}
@@ -40,20 +42,23 @@ function GameItem({ match }: any) {
           />
         </figure>
       </div>
-      <div>
-        <h2>{gameInfo.name}</h2>
-        <p>
+      <div className='panel info'>
+        <h2 className='mb-4'>{gameInfo.name}</h2>
+        <p className='mb-1 m-0'>
           <strong>Genres: </strong>
           {gameInfo.genres}
         </p>
-        <p>
+        <p className='mb-1 mt-0'>
           <strong>Platforms: </strong>
           {gameInfo.platforms}
         </p>
-        <p>
+        <p className='mb-4 mt-0'>
           <strong>Developers: </strong>
           {gameInfo.developers}
         </p>
+        <Button variant='contained' color='primary' disableElevation>
+          Add to Cart
+        </Button>
       </div>
     </article>
   );

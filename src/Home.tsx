@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import GameItemMiniature from './components/GameItemMiniature';
+import './styles/home.scss';
 
 function Home() {
   React.useEffect(() => {
@@ -21,6 +22,7 @@ function Home() {
   return (
     <main className='container'>
       <section className='row'>
+        <p className='heading announcer col-lg-12'>Most Popular Games</p>
         {gameList.map((game: any) => (
           <Link to={`/${game.id}`} className='col-lg-3 mb-2 mt-2'>
             <GameItemMiniature
@@ -31,8 +33,6 @@ function Home() {
           </Link>
         ))}
       </section>
-
-      <section>slick-carousel</section>
     </main>
   );
 }

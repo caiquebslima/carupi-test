@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom';
+import '../styles/header.scss';
 function Header() {
   return (
-    <header>
-      <h1>João's Game Shop</h1>
-      <nav>
-        <ul>
-          <li>Home</li>
-        </ul>
-      </nav>
+    <header className='heading mb-2'>
+      <Link to='/'>
+        <h1>João's Game Shop</h1>
+      </Link>
     </header>
   );
 }
