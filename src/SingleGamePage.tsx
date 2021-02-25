@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import './styles/game-item.scss';
+import './styles/single-game-page.scss';
 import Button from '@material-ui/core/Button';
 
-function GameItem({ match }: any) {
+function SingleGamePage({ match }: any) {
   React.useEffect(() => {
     fetchGame();
   }, []);
@@ -66,4 +66,4 @@ function GameItem({ match }: any) {
   );
 }
 
-export default GameItem;
+export default SingleGamePage;

@@ -21,16 +21,18 @@ function Home() {
 
   return (
     <main className='container'>
-      <section className='row'>
+      <section className='row pb-5'>
         <p className='heading announcer col-lg-12'>Most Popular Games</p>
         {gameList.map((game: any) => (
-          <Link to={`/${game.id}`} className='col-lg-3 mb-2 mt-2'>
-            <GameItemMiniature
-              key={game.id}
-              background_image={game.background_image}
-              name={game.name}
-            />
-          </Link>
+          <div className='col-lg-3 my-2 px-2'>
+            <Link to={`/${game.id}`}>
+              <GameItemMiniature
+                key={game.id}
+                background_image={game.background_image}
+                name={game.name}
+              />
+            </Link>
+          </div>
         ))}
       </section>
     </main>
