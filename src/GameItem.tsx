@@ -34,31 +34,33 @@ function GameItem({ match }: any) {
 
   return (
     <article className='container game-item'>
-      <div className='panel image'>
-        <figure>
-          <img
-            src={gameInfo.background_image}
-            alt={gameInfo.background_image + ' cover'}
-          />
-        </figure>
-      </div>
-      <div className='panel info'>
-        <h2 className='mb-4'>{gameInfo.name}</h2>
-        <p className='mb-1 m-0'>
-          <strong>Genres: </strong>
-          {gameInfo.genres}
-        </p>
-        <p className='mb-1 mt-0'>
-          <strong>Platforms: </strong>
-          {gameInfo.platforms}
-        </p>
-        <p className='mb-4 mt-0'>
-          <strong>Developers: </strong>
-          {gameInfo.developers}
-        </p>
-        <Button variant='contained' color='primary' disableElevation>
-          Add to Cart
-        </Button>
+      <div className='row'>
+        <div className='panel image col-lg-6'>
+          <figure>
+            <img
+              src={gameInfo.background_image}
+              alt={gameInfo.background_image + ' cover'}
+            />
+          </figure>
+        </div>
+        <div className='panel info col-lg-6 col-12'>
+          <h2 className='mb-4'>{gameInfo.name}</h2>
+          <p className='mb-1 m-0'>
+            <strong>Genres: </strong>
+            {gameInfo.genres}
+          </p>
+          <p className='mb-1 mt-0'>
+            <strong>Platforms: </strong>
+            {gameInfo.platforms}
+          </p>
+          <p className='mb-4 mt-0'>
+            <strong>Developers: </strong>
+            {gameInfo.developers}
+          </p>
+          <Button variant='contained' color='primary' disableElevation>
+            Add to Cart
+          </Button>
+        </div>
       </div>
     </article>
   );
